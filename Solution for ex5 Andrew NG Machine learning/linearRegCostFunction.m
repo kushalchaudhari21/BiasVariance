@@ -24,6 +24,8 @@ Reg_term = (lambda/(2*m)) * sum(theta(2:end).^2);
 
 J = (1/(2*m)) * sum((H-y).^2) + Reg_term;
 
+grad(1) = (X(:,1)' * (H - y))/m;
+grad(2:end) = (X(:,2:end)' * (H - y))/m + (lambda/m) * theta(2:end);
 
 
 
