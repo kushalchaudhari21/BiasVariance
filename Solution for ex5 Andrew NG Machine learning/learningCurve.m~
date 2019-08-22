@@ -52,20 +52,7 @@ error_val   = zeros(m, 1);
 %
 
 % ---------------------- Sample Solution ----------------------
-%lambda during training is set to zero because we are trying to fit a 2D theta.
-%Regularisation is not that helpful for theta with such less dimension.
 
-for i = 1:m
-          % Compute train/cross validation errors using training examples 
-          % X(1:i, :) and y(1:i), storing the result in 
-          % error_train(i) and error_val(i)
-
-	  
-	  t = trainLinearReg(X(1:i,:), y(1:i), lambda=0);
-          error_train(i) = linearRegCostFunction(X(1:i,:), y(1:i), t, lambda=0);
-          error_val(i) = linearRegCostFunction(Xval, yval, t, lambda=0);
-          
-endfor
 
 
 
