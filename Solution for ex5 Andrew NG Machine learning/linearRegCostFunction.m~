@@ -22,7 +22,7 @@ grad = zeros(size(theta));
 H = X * theta;
 Reg_term = (lambda/(2*m)) * sum(theta(2:end).^2);
 
-J = (1/(2*m)) * sum((H-y).^2) + Reg_term;
+J = (1/(2*m)) * sum((H-y).^2);
 
 
 
