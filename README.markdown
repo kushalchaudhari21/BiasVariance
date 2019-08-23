@@ -97,7 +97,7 @@ Learning curve:
 
 The polynomial fit is very complex and even drops off at the extremes. From learning curve, Training error is low, but the cross validation error is high. There is a gap between the training and cross validation errors. Both these insights refer to a high variance problem in the model.
 
-**7.** One way to combat the overfitting (high-variance) problem is to add regularization to the model. Auto select *lambda* to get the best fitted model. Try different values of λ in the range: {0, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1, 3, 10} and plot errors as a function of these values.
+**7.** One way to combat the overfitting(high-variance) problem is to add regularization to the model. Auto select *lambda* to get the best fitted model. Try different values of λ in the range: {0, 0.001, 0.003, 0.01, 0.03, 0.1, 0.3, 1, 3, 10} and plot errors as a function of these values.
 ```matlab
 for i = 1:length(lambda_vec)
     lambda = lambda_vec(i);
