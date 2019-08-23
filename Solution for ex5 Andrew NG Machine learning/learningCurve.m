@@ -61,13 +61,11 @@ for i = 1:m
           % error_train(i) and error_val(i)
 
 	  
-	  t = trainLinearReg(X(1:i,:), y(1:i), lambda=0);
-          error_train(i) = linearRegCostFunction(X(1:i,:), y(1:i), t, lambda=0);
-          error_val(i) = linearRegCostFunction(Xval, yval, t, lambda=0);
+	  t = trainLinearReg(X(1:i,:), y(1:i), lambda);
+          error_train(i) = linearRegCostFunction(X(1:i,:), y(1:i), t, 0);
+          error_val(i) = linearRegCostFunction(Xval, yval, t, 0);
           
 endfor
-
-
 
 
 

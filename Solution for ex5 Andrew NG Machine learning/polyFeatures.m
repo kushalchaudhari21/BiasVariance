@@ -15,8 +15,19 @@ X_poly = zeros(numel(X), p);
 %
 % 
 
+%Trying broadcasting method for faster execution instead of using a "for loop".	   
+p_v = 1:1:p;
 
+    %Using built in broadcasting function
+X_poly = bsxfun(@power, X, p_v);
 
+    %Alternatively bitwise operator can be used which is mostly same as the bsxfun function.
+%X_poly = X.^p_v;
+
+%"for loop" as shown below can also be used but it is better to go for vectorised implementations.
+%for j = 1 : p
+%    X_poly(:,j) = X.^j;
+%endfor
 
 
 

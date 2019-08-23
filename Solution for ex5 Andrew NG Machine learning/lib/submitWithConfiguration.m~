@@ -25,7 +25,7 @@ function submitWithConfiguration(conf)
     fprintf('\n!! Submission failed: %s\n', e.message);
     fprintf('\n\nFunction: %s\nFileName: %s\nLineNumber: %d\n', ...
       e.stack(1,1).name, e.stack(1,1).file, e.stack(1,1).line);
-    fprintf('Error from file:%s\nFunction:%s\nOn line:%d\n', e.stack(1,1).file,e.stack(1,1).name, e.stack(1,1).line );
+    fprintf('\nPlease correct your code and resubmit.\n');
     return
   end
 
